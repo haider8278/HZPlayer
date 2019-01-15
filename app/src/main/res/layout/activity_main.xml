@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/bg_poster"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:alpha="0.7"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ed_sherren_bck" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/poster"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/ed_sherren"
+        app:civ_border_color="@color/colorWhite"
+        app:civ_border_width="5dp" />
+
+    <Button
+        android:id="@+id/play_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="98dp"
+        android:background="@drawable/ic_action_play" />
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@+id/play_btn"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="98dp"
+        android:background="@drawable/login_ic_next" />
+
+    <Button
+        android:id="@+id/prev_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@+id/play_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="98dp"
+        android:background="@drawable/login_ic_previous" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:max="10"
+        android:outlineAmbientShadowColor="@color/colorWhite"
+        android:outlineSpotShadowColor="@color/colorPrimaryDark"
+        android:progress="5" />
+
+    <Button
+        android:id="@+id/shuffle_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="99dp"
+        android:background="@drawable/login_ic_shuffle" />
+
+    <Button
+        android:id="@+id/repeat_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/next_btn"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/login_ic_repeat_" />
+
+    <TextView
+        android:id="@+id/music_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
+        android:scrollHorizontally="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="Tum meri jan"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+</RelativeLayout>
